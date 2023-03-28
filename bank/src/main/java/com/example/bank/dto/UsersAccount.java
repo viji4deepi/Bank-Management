@@ -1,14 +1,21 @@
 package com.example.bank.dto;
 
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
+
+import java.util.List;
 
 // THis is used for all getter, setters, constructors and to string
 @Data
-public class UsersAccountDto {
+public class UsersAccount {
+
 
         private  String userAccNo;
+
         private String name;
 
-        private String account_type;
-        private long balance;
+        @ManyToMany
+        private List<BankAccount> accounts;
+
+
 }

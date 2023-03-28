@@ -5,14 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
-import java.math.BigDecimal;
-import java.util.UUID;
+import java.util.List;
 
 @Entity
 @Table(name = "Bank_details")
 @Getter
 @Setter
-public class UserAccount {
+public class UserEntity {
 
     @Id
     @GeneratedValue(generator = "uuid2")
@@ -22,6 +21,8 @@ public class UserAccount {
     private  String account_no;
     private String name;
 
+    @OneToMany
+    private List<DataEntity> dataEntity;
     private String account_type;
     private long balance;
 }
