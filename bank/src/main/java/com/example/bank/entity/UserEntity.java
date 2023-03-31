@@ -23,6 +23,6 @@ public class UserEntity {
 
     @OneToMany
     private List<DataEntity> dataEntity;
-    private String account_type;
-    private long balance;
+    //private String account_type;
+    //private long balance;
 }
