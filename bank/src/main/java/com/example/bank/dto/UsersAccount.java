@@ -1,6 +1,7 @@
 package com.example.bank.dto;
 
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class UsersAccount {
 
         private String name;
 
-        @ManyToMany
+        @OneToMany
         private List<BankAccount> accounts;
 
 
